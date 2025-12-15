@@ -1,0 +1,55 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<div class="container">
+
+<div class="description_page1">
+<p id="main">
+    Galaxy Hotel Thamle,Narshingchowk
+</p>
+
+<p class="describe"> 
+    Welcome to Hotel Galaxy, a modern hotel where comfort meets elegance. Nestled in the heart of the city, 
+    our hotel offers a perfect blend of luxury, warmth, and convenience — making it ideal for both business and leisure
+     travelers.
+</p>
+
+<p class="describe">
+    Located just minutes away from major attractions, shopping centers, and transport hubs, Hotel Galaxy is your
+     ultimate destination for comfort, care, and convenience. Whether you’re here for a weekend getaway or a business 
+     meeting, we promise to make your stay memorable.
+</p>
+</div>
+
+<div class="images">
+    
+       <div class="picture"> <img src="{% static 'images/pic 1.jpg'%}"></div>
+        <div class="picture"><img src="{% static 'images/pic 10.webp'%}"></div>
+        <div class="picture"><img src="{% static 'images/pic 7.webp'%}"></div>
+
+      <div id="adding_picture">
+        <img src="{% static 'images/pic 8.jpg'%}">
+        <i class="fa-solid fa-plus overlay"></i>
+
+       </div>
+   </div>
+   </div>
+
+   <div id="hiding">
+        <div class="hidden_images"><img src="{% static 'images/pic 2.webp'%}"></div>
+        <div class="hidden_images"><img src="{% static 'images/pic 3.jpg'%}"></div>
+        <div class="hidden_images"><img src="{% static 'images/pic 4.webp'%}"></div>
+        <div class="hidden_images"><img src="{% static 'images/pic 5.jpg'%}"></div>
+         <div class="hidden_images"><img src="{% static 'images/pic 6.jpg'%}"></div>
+          <div class="hidden_images"><img src="{% static 'images/pic 8.jpg'%}"></div>
+           <div class="hidden_images"><img src="{% static 'images/pic 9.png'%}"></div>
+    </div>
+
+
+
+ <script src="{% static 'home.js' %}"></script>
+{% endblock %}

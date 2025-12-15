@@ -1,0 +1,51 @@
+{% extends "index.html" %}
+{% block content %}
+{% load static %}
+
+<div class="login_overlay"></div>
+  <form method="POST" action="" id="adding">
+  {% csrf_token %}
+  
+
+ <div class="style">
+     <!-- <form id="adding"> -->
+    <label>Username:
+    <input type="text" name="username" placeholder="Enter Username" class="box"> <br>
+        </label>
+
+    <label for="password">Password:
+    <input type="password" name="password" placeholder="Enter Password" class="box"><br>
+         </label>
+     <button type="submit" class="submit">Submit</button><br>
+
+      <!-- <p class="signin">Don't have an account?</p>   -->
+      <a href="{% url 'sign_up'%}" class="signin">Don't have an account?</a>
+      
+   <div class="err_message">
+    {% if messages %}
+    {% for message in messages %}
+     <p style="color:red;font:700">{{message}}</p>
+   
+    {% endfor %}
+    {% endif %}
+    </div>
+   
+    <button type="button" id="logout">Logout</button>
+     </div> 
+</form> 
+
+
+    <div id="event" style="display: none;">
+        <div class="logout_sure">Do you want to logout?
+          <a href="{% url 'home'%}" id="yes">YES</a>
+          <a href="{% url 'login_page'%}" id="no">NO</a>
+          </div>
+          </div>
+ 
+ 
+<script src="{% static 'home.js' %}"defer></script>
+{% endblock %}
+
+
+    <!-- <button type ="submit">Yes</button>
+          <button type="submit" id="no"></button> -->

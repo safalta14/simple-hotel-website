@@ -1,0 +1,16 @@
+{% extends login.html %}
+{% load static %}
+{% block content %}
+<!-- <button type="button" id="logout">Logout</button> -->
+    
+   
+     <div id="event">
+        <p class="logout_sure">Do you want to logout?</p>
+          <a href="{% url 'home'%}">YES</a>
+          <a href="{% url 'login_page'%}">NO</a>
+          <!-- <button type ="submit">Yes</button>
+          <button type="submit" id="no"></button> -->
+          </div>
+
+    <script src="{% static 'logout.js' %} "></script>
+{% endblock %}

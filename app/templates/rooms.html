@@ -1,0 +1,135 @@
+{% extends 'index.html' %}
+{% load static %}
+ 
+<!-- <link rel="stylesheet" href="{% static 'css/carousel.css' %}"> -->
+ 
+
+ {% block content %}
+
+ <h1 style="padding-left:90px; color:aliceblue;">Our Accomodation(s)</h1>
+ <div class="room_main">
+
+
+    <div class="room">
+       <div class="carousel-container">
+          <div class="carousel-wrapper">
+        <!-- <div class="room_image"> -->
+             <div class="carousel-images" id="carousel1">
+                    <img src="{% static 'images/img1.avif' %}" class="carousel-active" alt="Room view 1">
+                    <img src="{% static 'images/view 1.jpg' %}" alt="Room view 2">
+                    <img src="{% static 'images/bth 1.jpg' %}" alt="Room view 3">
+                    
+                </div>
+                     <button id="prevBtn1" class="carousel-btn prev">&lt;</button>
+                     <button id="nextBtn1" class="carousel-btn next">&gt;</button>
+               </div>
+            <div class="carousel-indicators" id="indicators1"></div>
+            </div>
+
+        <div class="room_detail">
+            <h3>Classic Room with 1 kingsize bed</h3>
+            <h4>2 pers.max | Services </h4>
+        
+                <p>Room service for Food and Beverage</p>
+                <p>Bathroom</p>
+                <p>Media And Technology Facilities</p>
+                <p> Extra Service And Equipment like Temperature air contol</p>
+        </div>
+
+         <a href="{% url 'booking' %}" id="more_room">Book</a>
+
+     </div>
+
+      
+     
+     
+     <div class="room">
+       <div class="carousel-container">
+          <div class="carousel-wrapper">
+        <!-- <div class="room_image"> -->
+             <div class="carousel-images" id="carousel2">
+                    <img src="{% static 'images/img 2.avif' %}" class="carousel-active" alt="Room view 1">
+                    <img src="{% static 'images/view2.jpg' %}" alt="Room view 2">
+                    <img src="{% static 'images/bth 2.webp' %}" alt="Room view 3">
+                    
+                </div>
+                     <button id="prevBtn2" class="carousel-btn prev">&lt;</button>
+                     <button id="nextBtn2" class="carousel-btn next">&gt;</button>
+               </div>
+            <div class="carousel-indicators" id="indicators2"></div>
+            </div>
+
+        <div class="room_detail">
+            <h3>Beautiful Room with doublesize bed</h3>
+            <h4>3 pers.max | Services </h4>
+        
+                <p>Room service for Food and Beverage</p>
+                <p>Bathroom</p>
+                <p>Media And Technology Facilities</p>
+                <p>Extra Service And Equipment like baby crib</p>
+        </div>
+
+        
+        <a href="{% url 'booking' %}" id="more_room">Book</a>
+
+     </div>
+
+    
+      
+     <div class="room">
+       <div class="carousel-container">
+          <div class="carousel-wrapper">
+       
+             <div class="carousel-images" id="carousel3">
+                    <img src="{% static 'images/pic 4.webp' %}" class="carousel-active" alt="Room view 1">
+                    <img src="{% static 'images/view2.jpg' %}" alt="Room view 2">
+                    <img src="{% static 'images/bth 3.jpg' %}" alt="Room view 3">
+                    
+                </div>
+                     <button id="prevBtn3" class="carousel-btn prev">&lt;</button>
+                     <button id="nextBtn3" class="carousel-btn next">&gt;</button>
+               </div>
+            <div class="carousel-indicators" id="indicators3"></div>
+            </div>
+
+        <div class="room_detail">
+            <h3>Classic Room with kingsize bed</h3>
+            <h4>3 pers.max | Services </h4>
+        
+                <p>Room service for Food and Beverage</p>
+                <p>Bathroom</p>
+                <p>Media And Technology Facilities</p>
+                <p>Extra Service And Equipment like work area </p>
+        </div>
+
+       
+        <a href="{% url 'booking' %}" id="more_room">Book</a>
+  
+
+     </div> 
+
+
+
+ </div>
+
+ <script src="{% static 'carousel.js' %}"></script>
+
+ {% endblock %}
+
+ <!-- <a href="{% url 'see_details'%}" class="see_details">See details</a> -->
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+

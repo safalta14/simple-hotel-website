@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'main.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="sticky_navbar">
+     <h1 style="margin-top:20px; position:fixed;top:0;text-align:center;width:100%">Hotel Galaxy</h1>
+     
+    <div class="heading"> 
+       <a href="{% url 'login_page' %}" id="login">Login/Signup</a>
+    </div>
+
+     <div id="navbar">
+        <a class="links" href="{% url 'home'%}">Home</a> 
+        <a class="links" href="{% url 'description'%}">Description</a>
+        <a class="links" href="{% url 'rooms' %}">Rooms</a>
+        <!-- <a class="links" href="{% url 'booking'%}">Booking</a> -->
+    </div>
+    </div>
+
+    
+   
+        {% block content %}
+    
+   
+    <div class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome to Galaxy Hotel</h1>
+            <p>Cozy rooms with a touch of starry magic!</p>
+        </div>
+    </div>
+
+
+    <section id="description">
+        <h2>Description</h2>
+        <p class="description">
+            Galaxy Hotel is a friendly, student-style hotel with a cozy and welcoming atmosphere. Our rooms are comfortable, our lobby is spacious, and every corner is designed to make you feel at home.
+        </p>
+    </section>
+
+    
+    <section id="rooms">
+        <h2>Our Rooms & Spaces</h2>
+        <div class="gallery">
+            <img src="{% static 'images/view 1.jpg'%}" alt="Room 1">
+            <img src="{% static 'images/pic 6.jpg'%}" alt="Lobby">
+            <img src="{% static 'images/pic 5.jpg'%}" alt="Room 2">
+            <img src="{% static 'images/pic 3.jpg'%}" alt="View">
+            <img src="{% static 'images/view2.jpg'%}" alt="Suite">
+            <img src="{% static 'images/pic 8.jpg'%}" alt="">
+        </div>
+    </section>
+
+    
+    <section id="about">
+        <h2>About Galaxy Hotel</h2>
+        <p class="about">
+            Whether you’re staying for a night or a week, we make sure your stay is comfortable and fun. Enjoy relaxing spaces, friendly service, and a touch of starry magic!
+        </p>
+    </section>
+
+   
+    <footer id="contact">
+        <p>Contact us: <a href="mailto:info@galaxyhotel.com">info@galaxyhotel.com</a></p>
+        <p>&copy; 2025 Galaxy Hotel</p>
+    </footer>
+        {% endblock %}
+        
+    
+    
+    <script src="{% static 'carousel.js' %}"></script>
+</body>
+</html>

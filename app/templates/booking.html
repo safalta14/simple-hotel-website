@@ -1,0 +1,79 @@
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css'%}">
+
+<form method="POST" id="booking_form" novalidate>
+   {% csrf_token %}
+<div id="booking_system">
+    
+    <div class="book1">
+ <label>Name:<br>
+    <input type="text" placeholder="Register your name" name="name" class="booking_placeholder"required><br>
+ </label>
+
+ <label>Contact no:<br>
+    <input type="tel" pattern="^(97|98)[0-9]{8}$" required placeholder="Contact Number" name="contact_no"class="booking_placeholder"><br>
+ </label>
+
+ 
+<label>Date:<br>
+   <input type="date" placeholder="YYYY-MM-DD" name="date" required min="{{ tomorrow|date:'Y-m-d' }}" class="booking_placeholder"><br>
+   {% if form.date.errors %}
+   <div class="error">{{ form.date.errors.0 }}</div>
+      {% endif %}
+   </label>
+
+ 
+   <div class="payment">
+      <label>Reservation payment:<br>
+        <span>For reservation, scan the QR below</span><br>
+    <button type="button" id="qr_payment">Pay</button>
+    </label>
+   </div>
+   
+
+    <div class="status-box">
+    <div class="status-label">Status:</div>
+    <div id="payment_status">---</div>
+  </div>
+  </div>
+
+  <div class="line"></div>
+
+ <div class="book2">
+   <label>Email:<br>
+                <input type="email" id="email_input" placeholder="Enter email" name="email" class="booking_placeholder" required><br>
+                {% if form.email.errors %}
+                    <div class="error">{{ form.email.errors.0 }}</div>
+                {% endif %}
+            </label>
+
+ <label>No of people:<br>
+    <input type="number" placeholder=" " name="no_of_people" class="booking_placeholder"required min="1"><br>
+ </label>
+
+   <label>Time:<br>
+                <input type="time" placeholder="hr:min" name="time" class="booking_placeholder" required><br>
+                {% if form.time.errors %}
+                    <div class="error">{{ form.time.errors.0 }}</div>
+                {% endif %}
+            </label>
+
+ <button type="submit" id="submit_booking" >Submit</button>
+ </div>
+
+</div>
+</form>
+
+<div id="qr_overlay">
+    <div id="qr_code">
+   <img src="{% static 'images/pic 4.webp' %}" alt="">
+</div>
+</div>
+
+<div id="booking_message">
+    <!-- The room is reserved. For more details, contact us. Thank you! -->
+</div>
+
+<script src="{% static 'home.js'%}"></script>
+{% endblock %}

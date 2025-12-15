@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<form method="POST">
+{% csrf_token %}
+
+<div class="new_account">
+    <label>Username:
+   <input type="text" name="username" placeholder="Enter username" class="box"><br><br>
+    </label>
+
+    <label>Password:
+        <input type="password" name="password" placeholder="Enter new password" class="box"><br><br>
+    </label>
+
+    <label>Confirm password:
+        <input type="password" name="v_password" placeholder="confirm password" class="box"><Br><br>
+    </label>
+
+    <button type="submit" class="submit">Submit</button><br>
+    
+
+     <div class="err_message">
+    {% if messages %}
+    {% for message in messages %}
+     <p style="color:red;font:700">{{message}}</p>
+   </div>
+    {% endfor %}
+    {% endif %}
+    
+    </div>
+</form>
+
+{% endblock %}
